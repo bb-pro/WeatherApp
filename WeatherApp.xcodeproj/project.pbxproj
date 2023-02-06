@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED787836299169230089F03B /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED787835299169230089F03B /* WeatherManager.swift */; };
 		ED788D31299147E7003AAAC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED788D30299147E7003AAAC2 /* AppDelegate.swift */; };
 		ED788D33299147E7003AAAC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED788D32299147E7003AAAC2 /* SceneDelegate.swift */; };
 		ED788D35299147E7003AAAC2 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED788D34299147E7003AAAC2 /* WeatherViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED787835299169230089F03B /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		ED788D2D299147E7003AAAC2 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED788D30299147E7003AAAC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED788D32299147E7003AAAC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				ED788D36299147E7003AAAC2 /* Main.storyboard */,
 				ED788D39299147E9003AAAC2 /* Assets.xcassets */,
 				ED788D3B299147E9003AAAC2 /* LaunchScreen.storyboard */,
+				ED787835299169230089F03B /* WeatherManager.swift */,
 				ED788D3E299147E9003AAAC2 /* Info.plist */,
 			);
 			path = WeatherApp;
@@ -140,6 +143,7 @@
 			files = (
 				ED788D35299147E7003AAAC2 /* WeatherViewController.swift in Sources */,
 				ED788D31299147E7003AAAC2 /* AppDelegate.swift in Sources */,
+				ED787836299169230089F03B /* WeatherManager.swift in Sources */,
 				ED788D33299147E7003AAAC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
