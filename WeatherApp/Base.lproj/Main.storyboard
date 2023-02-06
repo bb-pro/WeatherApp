@@ -33,7 +33,7 @@
                                         <rect key="frame" x="57.666666666666657" y="0.0" width="282.66666666666674" height="34.333333333333336"/>
                                         <color key="backgroundColor" systemColor="placeholderTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUc-11-VwZ">
                                         <rect key="frame" x="348.33333333333331" y="0.0" width="49.666666666666686" height="34.333333333333336"/>
