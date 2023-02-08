@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate {
+class WeatherViewController: UIViewController {
     //MARK: - IB Outlets
     
     @IBOutlet var conditionImageView: UIImageView!
@@ -28,49 +28,53 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
         
         searchTextField.delegate = self
     }
+}
+
+//MARK: - UITextFieldDelegate
+extension WeatherViewController: UITextFieldDelegate {
     
     @IBAction func searchPressed(_ sender: UIButton) {
-        }
-        
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            searchTextField.endEditing(true)
-            return true
-        }
-        
-        func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-            if textField.text != "" {
-                return true
-            } else {
-                textField.placeholder = "Type something"
-                return false
-            }
-        }
-        
-        func textFieldDidEndEditing(_ textField: UITextField) {
-            
-            if let city = searchTextField.text {
-                weatherManager.fetchWeather(cityName: city)
-                
-                
-            }
-        }
-        
-        func didUpdateWeather(_ weatherManage: WeatherManager, weather: WeatherModel) {
-            DispatchQueue.main.async {
-                self.temperatureLabel.text = weather.temperatureString
-                self.conditionImageView.image = UIImage(systemName: weather.conditionName)
-                self.cityLabel.text = weather.cityName
-                self.weatherDescription.text = weather.description
-                print(weather.conditionId)
-            }
-            
-            
-        }
-        
-        func didFailWithError(error: Error) {
-            print(error)
-        }
-        
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.endEditing(true)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            return true
+        } else {
+            textField.placeholder = "Type something"
+            return false
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if let city = searchTextField.text {
+            weatherManager.fetchWeather(cityName: city)
+            
+            
+        }
+    }
+}
+
+//MARK: - WeatherManagerDelegate
+extension WeatherViewController: WeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManage: WeatherManager, weather: WeatherModel) {
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = weather.temperatureString
+            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
+            self.cityLabel.text = weather.cityName
+            self.weatherDescription.text = weather.description
+        }
+    }
+    
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+}
+
 
