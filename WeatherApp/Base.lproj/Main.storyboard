@@ -119,6 +119,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="celciusCircle" destination="WoH-yc-cjl" id="VXh-9S-gga"/>
+                        <outlet property="celsiuslabel" destination="eWP-0o-1jd" id="7yh-jG-75N"/>
                         <outlet property="cityLabel" destination="4E2-Gq-XV8" id="E2B-xN-Vdg"/>
                         <outlet property="conditionImageView" destination="R0u-sm-ady" id="iZg-aL-Kiv"/>
                         <outlet property="searchTextField" destination="FdJ-FH-pmx" id="WGe-ab-Reg"/>

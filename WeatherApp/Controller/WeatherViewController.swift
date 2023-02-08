@@ -12,11 +12,16 @@ import CoreLocation
 class WeatherViewController: UIViewController {
     //MARK: - IB Outlets
     
+    @IBOutlet var celsiuslabel: UILabel!
+    @IBOutlet var celciusCircle: UILabel!
+    
     @IBOutlet var conditionImageView: UIImageView!
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var searchTextField: UITextField!
     @IBOutlet var weatherDescription: UILabel!
+    
+    var tempString: String = ""
     
     let locationManager = CLLocationManager()
     
@@ -25,17 +30,31 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager.delegate = self
+        celsiuslabel.isHidden = true
+        celciusCircle.isHidden = true
+        weatherDescription.isHidden = true
         
+        locationManager.delegate = self
         
         weatherManager.delegate = self
         searchTextField.delegate = self
         }
     
+  
+    
     
     @IBAction func getLocationPressed(_ sender: UIButton) {
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        UIView.animate(withDuration: 5, animations: {
+            self.conditionImageView.image = UIImage(systemName: "magnifyingglass")
+            self.weatherDescription.text = "Подключение..."
+            self.conditionImageView.alpha = 0.5
+            self.conditionImageView.isHidden = false
+            self.celciusCircle.isHidden = false
+            self.celsiuslabel.isHidden = false
+            self.weatherDescription.isHidden = false
+        })
     }
 }
 
@@ -63,6 +82,14 @@ extension WeatherViewController: UITextFieldDelegate {
         
         if let city = searchTextField.text {
             weatherManager.fetchWeather(cityName: city)
+            UIView.animate(withDuration: 5, animations: {
+                self.conditionImageView.image = UIImage(systemName: "magnifyingglass")
+                self.weatherDescription.text = "Подключение..."
+                self.conditionImageView.alpha = 0.5
+                self.celciusCircle.isHidden = false
+                self.celsiuslabel.isHidden = false
+                self.weatherDescription.isHidden = false
+            })
         }
     }
 }
@@ -75,6 +102,7 @@ extension WeatherViewController: WeatherManagerDelegate {
             self.conditionImageView.image = UIImage(systemName: weather.conditionName)
             self.cityLabel.text = weather.cityName
             self.weatherDescription.text = weather.description
+            self.tempString = weather.temperatureString
         }
     }
     func didFailWithError(error: Error) {
