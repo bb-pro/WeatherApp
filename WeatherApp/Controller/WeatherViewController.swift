@@ -55,7 +55,7 @@ class WeatherViewController: UIViewController {
     }
     private func animateScreen(start: Bool) {
         if start {
-            UIView.animate(withDuration: 2, animations: {
+            UIView.animate(withDuration: 5, animations: {
                 self.conditionImageView.image = UIImage(systemName: "magnifyingglass")
                 self.weatherDescription.text = "Подключение..."
                 self.conditionImageView.alpha = 0.8
@@ -69,7 +69,7 @@ class WeatherViewController: UIViewController {
         }
     }
     private func hideElements() {
-        UIView.animate(withDuration: 2, animations: {
+        UIView.animate(withDuration: 5, animations: {
             self.conditionImageView.isHidden = true
             self.temperatureLabel.isHidden = true
             self.celsiuslabel.isHidden = true
