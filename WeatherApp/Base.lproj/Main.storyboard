@@ -51,17 +51,17 @@
                                 <rect key="frame" x="186" y="297" width="233" height="130.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ew-bc-oXg" userLabel="Temperature Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="130.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="233" height="130.33333333333334"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="95"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoH-yc-cjl" userLabel="Temperature Label">
-                                        <rect key="frame" x="116" y="0.0" width="38" height="130.33333333333334"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoH-yc-cjl" userLabel="Temperature Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="130.33333333333334"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="100"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWP-0o-1jd" userLabel="Temperature Label">
-                                        <rect key="frame" x="160" y="0.0" width="73" height="130.33333333333334"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWP-0o-1jd" userLabel="Temperature Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="130.33333333333334"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="109"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -89,7 +89,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzV-dQ-WCf">
-                                <rect key="frame" x="200" y="275" width="0.0" height="19.333333333333314"/>
+                                <rect key="frame" x="150" y="275" width="0.0" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -107,7 +107,7 @@
                             <constraint firstItem="VQR-eW-OOu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Kon-UL-iV1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zzV-dQ-WCf" secondAttribute="trailing" id="MMw-rj-hwQ"/>
                             <constraint firstItem="4E2-Gq-XV8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="Pdj-H6-nc1"/>
-                            <constraint firstItem="zzV-dQ-WCf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="S8k-vg-RaA"/>
+                            <constraint firstItem="zzV-dQ-WCf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="S8k-vg-RaA"/>
                             <constraint firstItem="zXp-af-CaK" firstAttribute="top" secondItem="R0u-sm-ady" secondAttribute="bottom" constant="30" id="UAj-DC-rZD"/>
                             <constraint firstItem="eQH-3T-A2c" firstAttribute="centerX" secondItem="VQR-eW-OOu" secondAttribute="centerX" id="eGl-1z-o3s"/>
                             <constraint firstItem="eQH-3T-A2c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gBK-Ft-F19"/>

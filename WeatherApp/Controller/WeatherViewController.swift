@@ -27,36 +27,61 @@ class WeatherViewController: UIViewController {
     
     var weatherManager = WeatherManager()
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        celsiuslabel.isHidden = true
-        celciusCircle.isHidden = true
-        weatherDescription.isHidden = true
+        
         
         locationManager.delegate = self
         
+        locationManager.requestWhenInUseAuthorization()
+        
+        
         weatherManager.delegate = self
         searchTextField.delegate = self
-        }
+    }
     
-  
+    
     
     
     @IBAction func getLocationPressed(_ sender: UIButton) {
+        hideElements()
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        UIView.animate(withDuration: 5, animations: {
-            self.conditionImageView.image = UIImage(systemName: "magnifyingglass")
-            self.weatherDescription.text = "Подключение..."
-            self.conditionImageView.alpha = 0.5
-            self.conditionImageView.isHidden = false
-            self.celciusCircle.isHidden = false
-            self.celsiuslabel.isHidden = false
-            self.weatherDescription.isHidden = false
-        })
+        
     }
+    private func animateScreen(start: Bool) {
+        if start {
+            UIView.animate(withDuration: 2, animations: {
+                self.conditionImageView.image = UIImage(systemName: "magnifyingglass")
+                self.weatherDescription.text = "Подключение..."
+                self.conditionImageView.alpha = 0.8
+                self.celciusCircle.isHidden = false
+                self.celsiuslabel.isHidden = false
+                self.weatherDescription.isHidden = false
+                self.temperatureLabel.isHidden = false
+                self.conditionImageView.isHidden = false
+                self.cityLabel.isHidden = false
+            })
+        }
+    }
+    private func hideElements() {
+        UIView.animate(withDuration: 2, animations: {
+            self.conditionImageView.isHidden = true
+            self.temperatureLabel.isHidden = true
+            self.celsiuslabel.isHidden = true
+            self.celciusCircle.isHidden = true
+            self.weatherDescription.isHidden = true
+            self.cityLabel.isHidden = true
+        }
+        )
+    }
+    
 }
+
 
 //MARK: - UITextFieldDelegate
 extension WeatherViewController: UITextFieldDelegate {
@@ -71,6 +96,7 @@ extension WeatherViewController: UITextFieldDelegate {
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if textField.text != "" {
+            hideElements()
             return true
         } else {
             textField.placeholder = "Type something"
@@ -78,18 +104,11 @@ extension WeatherViewController: UITextFieldDelegate {
         }
     }
     
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
         if let city = searchTextField.text {
+            animateScreen(start: true)
             weatherManager.fetchWeather(cityName: city)
-            UIView.animate(withDuration: 5, animations: {
-                self.conditionImageView.image = UIImage(systemName: "magnifyingglass")
-                self.weatherDescription.text = "Подключение..."
-                self.conditionImageView.alpha = 0.5
-                self.celciusCircle.isHidden = false
-                self.celsiuslabel.isHidden = false
-                self.weatherDescription.isHidden = false
-            })
         }
     }
 }
@@ -116,6 +135,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
         if let location = locations.last {
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
+            animateScreen(start: true)
             weatherManager.fetchWeatherWithCoordinate(lat: lat, lon: lon)
             
         }
