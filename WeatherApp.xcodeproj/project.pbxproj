@@ -51,11 +51,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ED3EE5DF29965F82002D9061 /* CoinModel */ = {
+		ED3EE5E6299685B2002D9061 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ED788D34299147E7003AAAC2 /* WeatherViewController.swift */,
+				ED3EE5DD29965F66002D9061 /* CoinViewController.swift */,
 			);
-			path = CoinModel;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		ED788D24299147E7003AAAC2 = {
@@ -79,12 +81,7 @@
 			children = (
 				ED788D30299147E7003AAAC2 /* AppDelegate.swift */,
 				ED788D32299147E7003AAAC2 /* SceneDelegate.swift */,
-				ED788D34299147E7003AAAC2 /* WeatherViewController.swift */,
-				ED3EE5DD29965F66002D9061 /* CoinViewController.swift */,
-				ED3EE5E029965F82002D9061 /* CoinModel.swift */,
-				ED3EE5E129965F82002D9061 /* CoinManager.swift */,
-				ED3EE5E229965F82002D9061 /* CoinData.swift */,
-				ED3EE5DF29965F82002D9061 /* CoinModel */,
+				ED3EE5E6299685B2002D9061 /* Controllers */,
 				EDCAFC5E29920B9900264345 /* Model */,
 				ED788D36299147E7003AAAC2 /* Main.storyboard */,
 				ED788D39299147E9003AAAC2 /* Assets.xcassets */,
@@ -97,6 +94,9 @@
 		EDCAFC5E29920B9900264345 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ED3EE5E029965F82002D9061 /* CoinModel.swift */,
+				ED3EE5E129965F82002D9061 /* CoinManager.swift */,
+				ED3EE5E229965F82002D9061 /* CoinData.swift */,
 				ED787835299169230089F03B /* WeatherManager.swift */,
 				EDCAFC5F299219F400264345 /* WeatherData.swift */,
 				EDCAFC612992302E00264345 /* WeatherModel.swift */,

@@ -14,7 +14,7 @@ class CoinViewController: UIViewController, UIPickerViewDataSource {
     @IBOutlet var currencyLabel: UILabel!
     @IBOutlet var currencyPicker: UIPickerView!
     @IBOutlet var btcImageView: UIImageView!
-    @IBOutlet var centerImage: UIImageView!
+
     
     //MARK: - Private Properties
     var coinManager = CoinManager()
@@ -22,7 +22,6 @@ class CoinViewController: UIViewController, UIPickerViewDataSource {
     //MARK: - Override Methods
     override func viewDidLoad() {
         
-        centerImage.layer.cornerRadius = 10
         
         super.viewDidLoad()
         

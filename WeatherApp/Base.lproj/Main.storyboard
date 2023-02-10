@@ -109,7 +109,7 @@
                                 </state>
                                 <connections>
                                     <action selector="bitcoinButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Hv-XC-0hn"/>
-                                    <segue destination="xLL-vd-dyD" kind="presentation" id="zP9-VS-V5p"/>
+                                    <segue destination="xLL-vd-dyD" kind="show" id="zP9-VS-V5p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -231,29 +231,21 @@
                                 <rect key="frame" x="0.0" y="610" width="430" height="216"/>
                                 <color key="tintColor" red="0.70922654870000001" green="0.66230773929999998" blue="0.33040195700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 3" translatesAutoresizingMaskIntoConstraints="NO" id="xAO-rG-eQK">
-                                <rect key="frame" x="61.666666666666657" y="340" width="307" height="183"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yAO-62-dJu"/>
                         <color key="backgroundColor" red="0.4412904245" green="0.60307948450000004" blue="0.6155025959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0Qr-dK-wdW" firstAttribute="leading" secondItem="yAO-62-dJu" secondAttribute="leading" id="0l5-82-LMV"/>
                             <constraint firstItem="yAO-62-dJu" firstAttribute="trailing" secondItem="0DQ-AX-cxT" secondAttribute="trailing" constant="5" id="3J3-fo-oxm"/>
-                            <constraint firstItem="xAO-rG-eQK" firstAttribute="height" secondItem="YKY-cL-9S7" secondAttribute="height" multiplier="0.212051" id="7tZ-GO-HJk"/>
-                            <constraint firstItem="xAO-rG-eQK" firstAttribute="centerY" secondItem="YKY-cL-9S7" secondAttribute="centerY" id="IrG-mS-gr2"/>
                             <constraint firstItem="0DQ-AX-cxT" firstAttribute="top" secondItem="yAO-62-dJu" secondAttribute="top" constant="70" id="SRd-hz-CcQ"/>
                             <constraint firstItem="yAO-62-dJu" firstAttribute="bottom" secondItem="0Qr-dK-wdW" secondAttribute="bottom" constant="37" id="Tmy-aU-jUi"/>
                             <constraint firstItem="0DQ-AX-cxT" firstAttribute="leading" secondItem="yAO-62-dJu" secondAttribute="leading" constant="5" id="dwA-5D-45E"/>
-                            <constraint firstItem="xAO-rG-eQK" firstAttribute="centerX" secondItem="YKY-cL-9S7" secondAttribute="centerX" id="eJh-Ez-YV3"/>
-                            <constraint firstItem="xAO-rG-eQK" firstAttribute="width" secondItem="YKY-cL-9S7" secondAttribute="width" multiplier="0.713953" id="gpa-rU-ROD"/>
                             <constraint firstAttribute="trailing" secondItem="0Qr-dK-wdW" secondAttribute="trailing" id="lRB-1l-N3z"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="h9F-bt-0Iq"/>
                     <connections>
                         <outlet property="btcImageView" destination="hnJ-ia-hXu" id="Rss-w1-wSp"/>
-                        <outlet property="centerImage" destination="xAO-rG-eQK" id="f76-mF-viv"/>
                         <outlet property="currencyLabel" destination="mRy-oo-nFg" id="E73-1o-3Sv"/>
                         <outlet property="currencyPicker" destination="0Qr-dK-wdW" id="UhQ-r1-V9D"/>
                         <outlet property="rateLabel" destination="KIp-hO-uK0" id="6gR-ge-lg8"/>
@@ -265,7 +257,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image 3" width="1600" height="900"/>
         <image name="Image 8" width="800" height="1422"/>
         <image name="Image 9" width="800" height="1422"/>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="123"/>
