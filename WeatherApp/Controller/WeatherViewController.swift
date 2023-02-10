@@ -26,33 +26,25 @@ class WeatherViewController: UIViewController {
     let locationManager = CLLocationManager()
     
     var weatherManager = WeatherManager()
-    
-    
-    
-    
+    //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+                
         locationManager.delegate = self
         
         locationManager.requestWhenInUseAuthorization()
         
-        
         weatherManager.delegate = self
         searchTextField.delegate = self
     }
-    
-    
-    
-    
+    //MARK: - IB Actions
     @IBAction func getLocationPressed(_ sender: UIButton) {
         hideElements()
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
     }
+    //MARK: - Private Methods
     private func animateScreen(start: Bool) {
         if start {
             UIView.animate(withDuration: 5, animations: {
@@ -76,10 +68,8 @@ class WeatherViewController: UIViewController {
             self.celciusCircle.isHidden = true
             self.weatherDescription.isHidden = true
             self.cityLabel.isHidden = true
-        }
-        )
+        })
     }
-    
 }
 
 
@@ -103,7 +93,6 @@ extension WeatherViewController: UITextFieldDelegate {
             return false
         }
     }
-    
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let city = searchTextField.text {
@@ -137,7 +126,6 @@ extension WeatherViewController: CLLocationManagerDelegate {
             let lon = location.coordinate.longitude
             animateScreen(start: true)
             weatherManager.fetchWeatherWithCoordinate(lat: lat, lon: lon)
-            
         }
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
