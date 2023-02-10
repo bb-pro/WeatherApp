@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED3EE5DE29965F66002D9061 /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EE5DD29965F66002D9061 /* CoinViewController.swift */; };
+		ED3EE5E32996609F002D9061 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EE5E029965F82002D9061 /* CoinModel.swift */; };
+		ED3EE5E4299660A1002D9061 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EE5E129965F82002D9061 /* CoinManager.swift */; };
+		ED3EE5E5299660A3002D9061 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EE5E229965F82002D9061 /* CoinData.swift */; };
 		ED787836299169230089F03B /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED787835299169230089F03B /* WeatherManager.swift */; };
 		ED788D31299147E7003AAAC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED788D30299147E7003AAAC2 /* AppDelegate.swift */; };
 		ED788D33299147E7003AAAC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED788D32299147E7003AAAC2 /* SceneDelegate.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED3EE5DD29965F66002D9061 /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
+		ED3EE5E029965F82002D9061 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		ED3EE5E129965F82002D9061 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+		ED3EE5E229965F82002D9061 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		ED787835299169230089F03B /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		ED788D2D299147E7003AAAC2 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED788D30299147E7003AAAC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED3EE5DF29965F82002D9061 /* CoinModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoinModel;
+			sourceTree = "<group>";
+		};
 		ED788D24299147E7003AAAC2 = {
 			isa = PBXGroup;
 			children = (
@@ -64,7 +79,12 @@
 			children = (
 				ED788D30299147E7003AAAC2 /* AppDelegate.swift */,
 				ED788D32299147E7003AAAC2 /* SceneDelegate.swift */,
-				EDCAFC63299231D400264345 /* Controller */,
+				ED788D34299147E7003AAAC2 /* WeatherViewController.swift */,
+				ED3EE5DD29965F66002D9061 /* CoinViewController.swift */,
+				ED3EE5E029965F82002D9061 /* CoinModel.swift */,
+				ED3EE5E129965F82002D9061 /* CoinManager.swift */,
+				ED3EE5E229965F82002D9061 /* CoinData.swift */,
+				ED3EE5DF29965F82002D9061 /* CoinModel */,
 				EDCAFC5E29920B9900264345 /* Model */,
 				ED788D36299147E7003AAAC2 /* Main.storyboard */,
 				ED788D39299147E9003AAAC2 /* Assets.xcassets */,
@@ -82,14 +102,6 @@
 				EDCAFC612992302E00264345 /* WeatherModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		EDCAFC63299231D400264345 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				ED788D34299147E7003AAAC2 /* WeatherViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +177,14 @@
 			files = (
 				ED788D35299147E7003AAAC2 /* WeatherViewController.swift in Sources */,
 				EDCAFC60299219F400264345 /* WeatherData.swift in Sources */,
+				ED3EE5E5299660A3002D9061 /* CoinData.swift in Sources */,
 				ED788D31299147E7003AAAC2 /* AppDelegate.swift in Sources */,
 				ED787836299169230089F03B /* WeatherManager.swift in Sources */,
+				ED3EE5E32996609F002D9061 /* CoinModel.swift in Sources */,
+				ED3EE5DE29965F66002D9061 /* CoinViewController.swift in Sources */,
 				EDCAFC622992302E00264345 /* WeatherModel.swift in Sources */,
 				ED788D33299147E7003AAAC2 /* SceneDelegate.swift in Sources */,
+				ED3EE5E4299660A1002D9061 /* CoinManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

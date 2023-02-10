@@ -21,7 +21,10 @@ class WeatherViewController: UIViewController {
     @IBOutlet var searchTextField: UITextField!
     @IBOutlet var weatherDescription: UILabel!
     
+    @IBOutlet var bitcoinButton: UIButton!
+    
     var tempString: String = ""
+    
     
     let locationManager = CLLocationManager()
     
@@ -29,21 +32,39 @@ class WeatherViewController: UIViewController {
     //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+      
                 
         locationManager.delegate = self
         
         locationManager.requestWhenInUseAuthorization()
         
+        UIView.animate(withDuration: 0.2, animations: {
+            self.bitcoinButton.frame.origin.y -= 100
+        })
+        hideElements()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
+        
         weatherManager.delegate = self
         searchTextField.delegate = self
+        bitcoinButton.layer.cornerRadius = 8
     }
     //MARK: - IB Actions
     @IBAction func getLocationPressed(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.bitcoinButton.frame.origin.y -= 100
+        })
         hideElements()
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
     }
+    
+    @IBAction func bitcoinButtonPressed(_ sender: UIButton) {
+    }
+    
+    
     //MARK: - Private Methods
     private func animateScreen(start: Bool) {
         if start {
@@ -57,6 +78,10 @@ class WeatherViewController: UIViewController {
                 self.temperatureLabel.isHidden = false
                 self.conditionImageView.isHidden = false
                 self.cityLabel.isHidden = false
+                self.bitcoinButton.isHidden = false
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.bitcoinButton.transform = CGAffineTransform(scaleX: 2, y: 2)
+                })
             })
         }
     }
@@ -68,6 +93,7 @@ class WeatherViewController: UIViewController {
             self.celciusCircle.isHidden = true
             self.weatherDescription.isHidden = true
             self.cityLabel.isHidden = true
+            self.bitcoinButton.isHidden = true
         })
     }
 }
@@ -86,6 +112,9 @@ extension WeatherViewController: UITextFieldDelegate {
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if textField.text != "" {
+            UIView.animate(withDuration: 0.2, animations: {
+                self.bitcoinButton.frame.origin.y -= 100
+            })
             hideElements()
             return true
         } else {
