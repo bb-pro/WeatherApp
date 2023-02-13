@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yeA-gD-rGD">
+    <device id="retina6_72" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -10,16 +10,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Weather View Controller-->
+        <!--Погода-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 9" translatesAutoresizingMaskIntoConstraints="NO" id="eQH-3T-A2c">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="951"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image9" translatesAutoresizingMaskIntoConstraints="NO" id="eQH-3T-A2c">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="853"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VQR-eW-OOu">
                                 <rect key="frame" x="16" y="79" width="398" height="34.333333333333343"/>
@@ -95,8 +96,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOA-8C-vOA">
-                                <rect key="frame" x="143.66666666666666" y="820" width="142.99999999999997" height="23"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOA-8C-vOA">
+                                <rect key="frame" x="143.66666666666666" y="722" width="142.99999999999997" height="23"/>
                                 <color key="backgroundColor" red="0.40548461679999998" green="0.6406456828" blue="0.74605119230000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="8qt-jj-OUI"/>
@@ -109,7 +110,6 @@
                                 </state>
                                 <connections>
                                     <action selector="bitcoinButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Hv-XC-0hn"/>
-                                    <segue destination="xLL-vd-dyD" kind="show" id="zP9-VS-V5p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -138,7 +138,12 @@
                             <constraint firstItem="VQR-eW-OOu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="w49-QF-XfH"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Погода" image="cloud.circle" catalog="system" id="grk-nA-E8T"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="SwB-uM-Iag"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="eQH-3T-A2c" id="beb-MS-MLf"/>
                         <outlet property="bitcoinButton" destination="tOA-8C-vOA" id="J8M-9X-PPY"/>
                         <outlet property="celciusCircle" destination="WoH-yc-cjl" id="VXh-9S-gga"/>
                         <outlet property="celsiuslabel" destination="eWP-0o-1jd" id="7yh-jG-75N"/>
@@ -151,24 +156,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.046511627906973" y="-2.5751072961373391"/>
+            <point key="canvasLocation" x="2037" y="764"/>
         </scene>
-        <!--Coin View Controller-->
+        <!--Курс биткоина-->
         <scene sceneID="g9t-fZ-uEY">
             <objects>
                 <viewController id="xLL-vd-dyD" customClass="CoinViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YKY-cL-9S7">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image 8" translatesAutoresizingMaskIntoConstraints="NO" id="Gy5-Al-Yfe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image8" translatesAutoresizingMaskIntoConstraints="NO" id="Gy5-Al-Yfe">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0DQ-AX-cxT">
-                                <rect key="frame" x="5" y="129" width="420" height="156"/>
+                                <rect key="frame" x="5" y="225" width="420" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Курс биткоина" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYA-V6-3TI">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Курс биткоина" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYA-V6-3TI">
                                         <rect key="frame" x="91.000000000000014" y="0.0" width="238.33333333333337" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="g8f-wT-GqX"/>
@@ -179,7 +185,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbx-Ya-adg" userLabel="Coin View">
-                                        <rect key="frame" x="55" y="76" width="310" height="80"/>
+                                        <rect key="frame" x="55" y="0.0" width="310" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YeR-OF-FtU">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
@@ -228,7 +234,7 @@
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qr-dK-wdW">
-                                <rect key="frame" x="0.0" y="610" width="430" height="216"/>
+                                <rect key="frame" x="0.0" y="596" width="430" height="216"/>
                                 <color key="tintColor" red="0.70922654870000001" green="0.66230773929999998" blue="0.33040195700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
                         </subviews>
@@ -243,7 +249,7 @@
                             <constraint firstAttribute="trailing" secondItem="0Qr-dK-wdW" secondAttribute="trailing" id="lRB-1l-N3z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="h9F-bt-0Iq"/>
+                    <navigationItem key="navigationItem" title="Курс биткоина" id="h9F-bt-0Iq"/>
                     <connections>
                         <outlet property="btcImageView" destination="hnJ-ia-hXu" id="Rss-w1-wSp"/>
                         <outlet property="currencyLabel" destination="mRy-oo-nFg" id="E73-1o-3Sv"/>
@@ -253,17 +259,135 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBq-6Q-6C5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750.69767441860461" y="-3.218884120171674"/>
+            <point key="canvasLocation" x="3759" y="764"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="rhO-74-hFY">
+            <objects>
+                <viewController id="hOb-LK-cQ1" customClass="SettingsViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lfv-M0-9ui">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="81d-IN-ca6">
+                                <rect key="frame" x="20" y="200" width="390" height="31"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="oeF-Lj-tVI">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Темная тема" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3O-xx-Ujt">
+                                                <rect key="frame" x="0.0" y="0.0" width="107.33333333333333" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="EJE-Lm-REn">
+                                        <rect key="frame" x="341" y="0.0" width="49" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" preferredStyle="sliding" translatesAutoresizingMaskIntoConstraints="NO" id="fHO-jU-Qs3">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="weatherSwitchPressed:" destination="hOb-LK-cQ1" eventType="valueChanged" id="xBA-VA-49R"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B0B-Zq-3F6"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="81d-IN-ca6" firstAttribute="leading" secondItem="B0B-Zq-3F6" secondAttribute="leading" constant="20" id="Pga-ZY-KPW"/>
+                            <constraint firstItem="81d-IN-ca6" firstAttribute="top" secondItem="B0B-Zq-3F6" secondAttribute="top" constant="45" id="TRv-Dz-tVe"/>
+                            <constraint firstItem="B0B-Zq-3F6" firstAttribute="trailing" secondItem="81d-IN-ca6" secondAttribute="trailing" constant="20" id="X0U-gM-25t"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Настройки" id="B3T-Ps-Orx"/>
+                    <connections>
+                        <outlet property="weatherBackgroundImage" destination="fHO-jU-Qs3" id="HT9-7y-cr0"/>
+                        <segue destination="yeA-gD-rGD" kind="presentation" identifier="goToStart" modalPresentationStyle="fullScreen" id="asc-aB-JhQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQm-Jx-iQW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3325" y="-55"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="9Rb-Aw-GV7">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yeA-gD-rGD" customClass="TabBarViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hxc-bZ-WzS"/>
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="sVj-ck-VvM">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.3521147966" green="0.35133409500000001" blue="0.50017130369999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wuo-sT-6uY"/>
+                        <segue destination="qVt-cR-1CY" kind="relationship" relationship="viewControllers" id="KcN-sa-vj0"/>
+                        <segue destination="E6y-QU-oeq" kind="relationship" relationship="viewControllers" id="Fkh-pL-Hmr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tgq-V0-7pc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1583.7209302325582" y="-3.218884120171674"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="WzW-Ov-FHL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E6y-QU-oeq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Настройки" image="gear" catalog="system" id="jBn-a0-PAA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xRu-Tg-zjU">
+                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hOb-LK-cQ1" kind="relationship" relationship="rootViewController" id="Spq-SF-Je9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZe-Xm-2bH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5467" y="45"/>
+        </scene>
+        <!--Курс BTC-->
+        <scene sceneID="sml-Qt-3c8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qVt-cR-1CY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Курс BTC" image="bitcoinsign.circle" catalog="system" id="W2j-t6-7jX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="tVL-US-vD1">
+                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xLL-vd-dyD" kind="relationship" relationship="rootViewController" id="vdE-uZ-z4J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DfK-eh-oFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2891" y="764"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Image 8" width="800" height="1422"/>
-        <image name="Image 9" width="800" height="1422"/>
+        <image name="Image8" width="800" height="1422"/>
+        <image name="Image9" width="800" height="1422"/>
+        <image name="bitcoinsign.circle" catalog="system" width="128" height="123"/>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="cloud.circle" catalog="system" width="128" height="123"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
         <image name="location.circle" catalog="system" width="128" height="123"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>

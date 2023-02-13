@@ -15,6 +15,8 @@ class WeatherViewController: UIViewController {
     @IBOutlet var celsiuslabel: UILabel!
     @IBOutlet var celciusCircle: UILabel!
     
+    @IBOutlet var backgroundImageView: UIImageView!
+    
     @IBOutlet var conditionImageView: UIImageView!
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var cityLabel: UILabel!
@@ -30,11 +32,14 @@ class WeatherViewController: UIViewController {
     
     var weatherManager = WeatherManager()
     
+    var weatherBackgroundIsOn = false
+    
     
     //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
+                                        
                 
         locationManager.delegate = self
         
@@ -51,6 +56,11 @@ class WeatherViewController: UIViewController {
         weatherManager.delegate = self
         searchTextField.delegate = self
         bitcoinButton.layer.cornerRadius = 8
+    }
+    // Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        self.view.endEditing(true)
     }
     //MARK: - IB Actions
     @IBAction func getLocationPressed(_ sender: UIButton) {
@@ -80,7 +90,7 @@ class WeatherViewController: UIViewController {
                 self.temperatureLabel.isHidden = false
                 self.conditionImageView.isHidden = false
                 self.cityLabel.isHidden = false
-                self.bitcoinButton.isHidden = false
+               
                 UIView.animate(withDuration: 0.5, animations: {
                     self.bitcoinButton.transform = CGAffineTransform(scaleX: 2, y: 2)
                 })
