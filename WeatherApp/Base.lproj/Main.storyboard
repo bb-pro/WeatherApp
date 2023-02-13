@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yeA-gD-rGD">
-    <device id="retina6_72" orientation="portrait" appearance="dark"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2037" y="764"/>
+            <point key="canvasLocation" x="1584" y="764"/>
         </scene>
         <!--Курс биткоина-->
         <scene sceneID="g9t-fZ-uEY">
@@ -259,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBq-6Q-6C5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3759" y="764"/>
+            <point key="canvasLocation" x="3232" y="764"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="rhO-74-hFY">
@@ -313,12 +313,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQm-Jx-iQW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3325" y="-55"/>
+            <point key="canvasLocation" x="3233" y="-3"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--О программе-->
+        <scene sceneID="cRJ-BF-JcM">
+            <objects>
+                <viewController id="TBJ-na-fHK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ILF-FC-plH">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о погоде" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOw-il-e75">
+                                <rect key="frame" x="20" y="219" width="224" height="26.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о курсе биткоина" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUv-Ht-4qp">
+                                <rect key="frame" x="20" y="285.33333333333331" width="311" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Версия 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcK-Ki-2Au">
+                                <rect key="frame" x="173" y="788.66666666666663" width="84" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1JT-3N-7oQ"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="cUv-Ht-4qp" firstAttribute="leading" secondItem="1JT-3N-7oQ" secondAttribute="leading" constant="20" id="GqJ-D4-bgP"/>
+                            <constraint firstItem="1JT-3N-7oQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UOw-il-e75" secondAttribute="trailing" symbolic="YES" id="SwY-Cv-Eqb"/>
+                            <constraint firstItem="UOw-il-e75" firstAttribute="leading" secondItem="1JT-3N-7oQ" secondAttribute="leading" constant="20" id="Tb9-Y1-EG0"/>
+                            <constraint firstItem="cUv-Ht-4qp" firstAttribute="top" secondItem="UOw-il-e75" secondAttribute="bottom" constant="40" id="YZc-Lb-mLy"/>
+                            <constraint firstItem="UOw-il-e75" firstAttribute="top" secondItem="1JT-3N-7oQ" secondAttribute="top" constant="64" id="aTH-jy-KxW"/>
+                            <constraint firstItem="PcK-Ki-2Au" firstAttribute="centerX" secondItem="ILF-FC-plH" secondAttribute="centerX" id="dca-30-YTg"/>
+                            <constraint firstItem="1JT-3N-7oQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cUv-Ht-4qp" secondAttribute="trailing" symbolic="YES" id="ksU-5D-xf8"/>
+                            <constraint firstItem="1JT-3N-7oQ" firstAttribute="bottom" secondItem="PcK-Ki-2Au" secondAttribute="bottom" constant="40" id="oHA-5C-ehz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="О программе" id="BSI-Ay-JjD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZvR-5k-kg8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5062.3255813953492" y="-16.094420600858371"/>
+        </scene>
+        <!--О приложении-->
         <scene sceneID="9Rb-Aw-GV7">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yeA-gD-rGD" customClass="TabBarViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController title="О приложении" automaticallyAdjustsScrollViewInsets="NO" id="yeA-gD-rGD" customClass="TabBarViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hxc-bZ-WzS"/>
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="sVj-ck-VvM">
@@ -329,6 +375,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wuo-sT-6uY"/>
                         <segue destination="qVt-cR-1CY" kind="relationship" relationship="viewControllers" id="KcN-sa-vj0"/>
                         <segue destination="E6y-QU-oeq" kind="relationship" relationship="viewControllers" id="Fkh-pL-Hmr"/>
+                        <segue destination="uyf-n2-j9v" kind="relationship" relationship="viewControllers" id="fas-Hn-HWc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgq-V0-7pc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -352,7 +399,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZe-Xm-2bH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5467" y="45"/>
+            <point key="canvasLocation" x="2443" y="-3"/>
         </scene>
         <!--Курс BTC-->
         <scene sceneID="sml-Qt-3c8">
@@ -371,7 +418,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DfK-eh-oFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2891" y="764"/>
+            <point key="canvasLocation" x="2442" y="764"/>
+        </scene>
+        <!--О программе-->
+        <scene sceneID="E2H-rC-ylJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uyf-n2-j9v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="О программе" image="info.circle" catalog="system" id="Y80-Em-Z3s"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="CSz-im-gxI">
+                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TBJ-na-fHK" kind="relationship" relationship="rootViewController" id="T6D-eD-YQ5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ybr-bN-hBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4163.7209302325582" y="-16.094420600858371"/>
         </scene>
     </scenes>
     <resources>
@@ -381,6 +447,7 @@
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="123"/>
         <image name="cloud.circle" catalog="system" width="128" height="123"/>
         <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="location.circle" catalog="system" width="128" height="123"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
