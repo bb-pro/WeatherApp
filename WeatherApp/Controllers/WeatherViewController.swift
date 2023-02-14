@@ -38,9 +38,6 @@ class WeatherViewController: UIViewController {
     //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-                                        
-                
         locationManager.delegate = self
         
         locationManager.requestWhenInUseAuthorization()
