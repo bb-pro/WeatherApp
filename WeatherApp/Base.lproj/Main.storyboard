@@ -138,7 +138,7 @@
                             <constraint firstItem="VQR-eW-OOu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="w49-QF-XfH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Погода" image="cloud.circle" catalog="system" id="grk-nA-E8T"/>
+                    <tabBarItem key="tabBarItem" title="Погода" image="cloud.fill" catalog="system" id="grk-nA-E8T"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="SwB-uM-Iag"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -368,6 +368,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hxc-bZ-WzS"/>
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="sVj-ck-VvM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.3521147966" green="0.35133409500000001" blue="0.50017130369999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
@@ -445,7 +446,7 @@
         <image name="Image9" width="800" height="1422"/>
         <image name="bitcoinsign.circle" catalog="system" width="128" height="123"/>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="cloud.circle" catalog="system" width="128" height="123"/>
+        <image name="cloud.fill" catalog="system" width="128" height="87"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="location.circle" catalog="system" width="128" height="123"/>
