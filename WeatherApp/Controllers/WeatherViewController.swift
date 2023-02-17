@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 
 
-class WeatherViewController: UIViewController {
+final class WeatherViewController: UIViewController {
     //MARK: - IB Outlets
     
     @IBOutlet var celsiuslabel: UILabel!
@@ -25,9 +25,9 @@ class WeatherViewController: UIViewController {
     
     @IBOutlet var bitcoinButton: UIButton!
     
+    
     var tempString: String = ""
-    
-    
+
     let locationManager = CLLocationManager()
     
     var weatherManager = WeatherManager()

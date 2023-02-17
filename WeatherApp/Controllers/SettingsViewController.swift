@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+final class SettingsViewController: UIViewController {
     
     var weatherScreen = UIViewController()
     var weatherBgIsOn = false

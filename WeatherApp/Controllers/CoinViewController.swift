@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CoinViewController: UIViewController, UIPickerViewDataSource {
+final class CoinViewController: UIViewController, UIPickerViewDataSource {
     
     //MARK: - IB Outlets
     @IBOutlet var rateLabel: UILabel!
