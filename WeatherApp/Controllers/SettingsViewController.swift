@@ -37,4 +37,7 @@ final class SettingsViewController: UIViewController {
             }
         }
     }
+    @IBAction func logOut() {
+        dismiss(animated: true)
+    }
 }

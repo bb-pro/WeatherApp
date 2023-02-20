@@ -296,6 +296,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6b-Zv-0nr">
+                                <rect key="frame" x="128.33333333333331" y="664.66666666666663" width="173.33333333333331" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Выйти из аккаунта"/>
+                                <connections>
+                                    <action selector="logOut" destination="hOb-LK-cQ1" eventType="touchUpInside" id="t7d-4o-GLj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B0B-Zq-3F6"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -303,6 +311,8 @@
                             <constraint firstItem="81d-IN-ca6" firstAttribute="leading" secondItem="B0B-Zq-3F6" secondAttribute="leading" constant="20" id="Pga-ZY-KPW"/>
                             <constraint firstItem="81d-IN-ca6" firstAttribute="top" secondItem="B0B-Zq-3F6" secondAttribute="top" constant="45" id="TRv-Dz-tVe"/>
                             <constraint firstItem="B0B-Zq-3F6" firstAttribute="trailing" secondItem="81d-IN-ca6" secondAttribute="trailing" constant="20" id="X0U-gM-25t"/>
+                            <constraint firstItem="B0B-Zq-3F6" firstAttribute="bottom" secondItem="E6b-Zv-0nr" secondAttribute="bottom" constant="150" id="rGW-cI-OO7"/>
+                            <constraint firstItem="E6b-Zv-0nr" firstAttribute="centerX" secondItem="lfv-M0-9ui" secondAttribute="centerX" id="u1B-HB-qCr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Настройки" id="B3T-Ps-Orx"/>
@@ -313,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQm-Jx-iQW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3233" y="-3"/>
+            <point key="canvasLocation" x="3231.6279069767443" y="-3.218884120171674"/>
         </scene>
         <!--О программе-->
         <scene sceneID="cRJ-BF-JcM">
