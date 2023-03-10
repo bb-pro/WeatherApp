@@ -42,9 +42,7 @@ final class WeatherViewController: UIViewController {
         
         locationManager.requestWhenInUseAuthorization()
         
-        UIView.animate(withDuration: 0.2, animations: {
-            self.bitcoinButton.frame.origin.y -= 100
-        })
+       
         hideElements()
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
@@ -52,7 +50,6 @@ final class WeatherViewController: UIViewController {
         
         weatherManager.delegate = self
         searchTextField.delegate = self
-        bitcoinButton.layer.cornerRadius = 8
     }
     // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -87,10 +84,6 @@ final class WeatherViewController: UIViewController {
                 self.temperatureLabel.isHidden = false
                 self.conditionImageView.isHidden = false
                 self.cityLabel.isHidden = false
-               
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.bitcoinButton.transform = CGAffineTransform(scaleX: 2, y: 2)
-                })
             })
         }
     }
@@ -102,7 +95,6 @@ final class WeatherViewController: UIViewController {
             self.celciusCircle.isHidden = true
             self.weatherDescription.isHidden = true
             self.cityLabel.isHidden = true
-            self.bitcoinButton.isHidden = true
         })
     }
 }
