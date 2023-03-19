@@ -96,21 +96,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOA-8C-vOA">
-                                <rect key="frame" x="143.66666666666666" y="722" width="142.99999999999997" height="23"/>
-                                <color key="backgroundColor" red="0.40548461679999998" green="0.6406456828" blue="0.74605119230000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="8qt-jj-OUI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Курс биткоина">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="bitcoinButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Hv-XC-0hn"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc4-SD-GZz">
+                                <rect key="frame" x="125" y="736" width="181" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Детальный прогноз"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -126,11 +116,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zzV-dQ-WCf" secondAttribute="trailing" id="MMw-rj-hwQ"/>
                             <constraint firstItem="4E2-Gq-XV8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="Pdj-H6-nc1"/>
                             <constraint firstItem="zzV-dQ-WCf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="S8k-vg-RaA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tOA-8C-vOA" secondAttribute="bottom" constant="55" id="SCQ-eS-aWz"/>
                             <constraint firstItem="zXp-af-CaK" firstAttribute="top" secondItem="R0u-sm-ady" secondAttribute="bottom" constant="30" id="UAj-DC-rZD"/>
                             <constraint firstItem="eQH-3T-A2c" firstAttribute="centerX" secondItem="VQR-eW-OOu" secondAttribute="centerX" id="eGl-1z-o3s"/>
                             <constraint firstItem="eQH-3T-A2c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gBK-Ft-F19"/>
-                            <constraint firstItem="tOA-8C-vOA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hKK-Fg-VLs"/>
                             <constraint firstItem="R0u-sm-ady" firstAttribute="top" secondItem="VQR-eW-OOu" secondAttribute="bottom" constant="17.670000000000002" id="mUV-xI-r6V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zXp-af-CaK" secondAttribute="trailing" constant="11" id="oKM-8S-fto"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4E2-Gq-XV8" secondAttribute="trailing" constant="20" id="pAv-VC-aaE"/>
@@ -144,7 +132,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="eQH-3T-A2c" id="beb-MS-MLf"/>
-                        <outlet property="bitcoinButton" destination="tOA-8C-vOA" id="J8M-9X-PPY"/>
                         <outlet property="celciusCircle" destination="WoH-yc-cjl" id="VXh-9S-gga"/>
                         <outlet property="celsiuslabel" destination="eWP-0o-1jd" id="7yh-jG-75N"/>
                         <outlet property="cityLabel" destination="4E2-Gq-XV8" id="E2B-xN-Vdg"/>
